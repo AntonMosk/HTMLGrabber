@@ -9,7 +9,7 @@ import java.net.URL;
 /**
  * Hello world!
  */
-public class HTMLHandler {
+class HTMLHandler {
 //    public static void main( String[] args ) throws IOException {
 //        HTMLHandler handler = new HTMLHandler();
 //        System.out.println(handler.handleWebPage("http://www.stackoverflow.com"));

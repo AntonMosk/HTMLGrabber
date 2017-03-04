@@ -1,7 +1,5 @@
 package HTMLGrabber;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.regex.Matcher;
@@ -10,10 +8,10 @@ import java.util.regex.Pattern;
 /**
  * Created by anton on 3/1/17.
  */
-public class HTMLParser {
+class HTMLParser {
 
 
-    public static boolean checkWithRegExp(String userNameString) {
+    private static boolean checkWithRegExp(String userNameString) {
         Pattern p = Pattern.compile("^[a-z0-9_-]");
         Matcher m = p.matcher(userNameString);
         return m.matches();
@@ -44,7 +42,7 @@ public class HTMLParser {
 
         Map<String, Integer> result = new TreeMap<>();
 
-        StringBuilder textToProcess = new StringBuilder();
+        StringBuilder textToProcess;
 
         textToProcess = removeScript(pageText,
                 "<script", "</script>");
